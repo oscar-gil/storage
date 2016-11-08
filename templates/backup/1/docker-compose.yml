@@ -1,0 +1,13 @@
+backup:
+  labels:
+    io.rancher.container.create_agent: 'true'
+    io.rancher.scheduler.global: 'true'
+  privileged: true
+  pid: host
+  volumes:
+    - /lib/modules:/lib/modules:ro
+    - /proc:/host/proc
+    - /var/run:/host/var/run
+    - /run:/host/run
+    - /etc/docker/plugins:/etc/docker/plugins
+  image: yaronr/backup-volume-container
