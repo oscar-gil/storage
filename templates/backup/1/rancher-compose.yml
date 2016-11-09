@@ -18,7 +18,7 @@
 #       description: "Comma delimited list of mount options, for example: 'nfsvers=4,proto=udp'"
 #       type: "string"
 
-backup-tools :
+backup-tools:
     metadata:
         data_vol: "${"DATA_VOL}"
 #        mount_dir: "${MOUNT_DIR}"
