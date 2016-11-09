@@ -2,12 +2,12 @@
     name: "backup-tools"
     version: "v0.0.1"
     description: "Backup Tools"
-#    questions:
-#     - variable: "NFS_SERVER"
-#       description: "IP or hostname of the NFS Server"
-#       label: "NFS Server"
-#       required: true
-#       type: "string"
+    questions:
+     - variable: "DATA_VOL"
+       description: "Origin Data Volume"
+       label: "DATA VOLUME"
+       required: true
+       type: "string"
 #     - variable: "MOUNT_DIR"
 #       label: "Mount Directory"
 #       description: "The directory on the NFS server to mount"
@@ -20,7 +20,7 @@
 
 backup-tools :
     metadata:
-#        nfs_server: "${NFS_SERVER}"
+        data_vol: "${"DATA_VOL}"
 #        mount_dir: "${MOUNT_DIR}"
 #        mount_opts: "${MOUNT_OPTS}"
     health_check:
