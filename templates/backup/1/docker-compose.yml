@@ -10,4 +10,4 @@ backup:
     - /var/run:/host/var/run
     - /run:/host/run
     - /etc/docker/plugins:/etc/docker/plugins
-  image: yaronr/backup-volume-container
+  image: ubuntu:14.04.3
