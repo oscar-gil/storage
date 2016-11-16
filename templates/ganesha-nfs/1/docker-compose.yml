@@ -1,5 +1,6 @@
 ganesha-nfs:
-  image: janeczku/rancher-ganesha-nfs:dev8
+  image: oscargil/rancher-ganesha-nfs:4.2
+#  image: janeczku/rancher-ganesha-nfs:dev8
   command: /opt/rancher/start_nfs.sh
   privileged: true
   labels:
