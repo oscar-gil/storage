@@ -1,5 +1,5 @@
 ganesha-nfs:
-  image: oscargil/rancher-ganesha-nfs:4.3
+  image: oscargil/rancher-ganesha-nfs:4.6
 # 4.3 # la del Jan en mi repo - 4.4 - base de 4.3 // 4.5 compilada de 0 no va
 #  image: janeczku/rancher-ganesha-nfs:dev8
   command: /opt/rancher/start_nfs.sh
