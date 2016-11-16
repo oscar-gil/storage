@@ -9,7 +9,7 @@
       description: "Choose the name of NFS export 1 to create"
       type: "string"
       required: true
-      default: "volumes"
+      default: "nfs_data"
     - variable: "EXPORT_2_NAME"
       label: "Export 2 Name"
       description: "Choose the name of NFS export 2 to create"
