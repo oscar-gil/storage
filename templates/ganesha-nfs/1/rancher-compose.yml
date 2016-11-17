@@ -30,6 +30,14 @@
         "/export/nfs" to the export path in the container.
       required: false
       type: "string"
+    - variable: "HOST_MOUNT"
+      label: "Host Mount (Optional)"
+      description: |
+        You can use a host bind mount to use as NFS storage instead of a Docker volume.
+        Enter the host path suffixed with a colon (:), e.g. "/exports/nfs:". This will mount
+        "/export/nfs" to the export path in the container.
+      required: false
+      type: "string"
 
 ganesha-nfs:
   retain_ip: true
