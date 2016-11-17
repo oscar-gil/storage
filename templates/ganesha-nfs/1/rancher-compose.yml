@@ -39,7 +39,6 @@
         - none
         - host1
         - host2
-
 ganesha-nfs:
   retain_ip: true
   metadata:
