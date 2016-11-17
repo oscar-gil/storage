@@ -33,12 +33,12 @@
     - variable: "HOSTID"
       label: "Host ID (Optional)"
       description: |
-        You can choose what host you want to start the container
+        You can choose what host you want to start the container or leave it blank
       required: true
       default: "host1"
       type: "enum"
       options:
-        - none
+        - ""
         - host1
         - host2
 
