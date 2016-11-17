@@ -32,8 +32,7 @@
       type: "string"
     - variable: "HOSTID"
       label: "Host ID (Optional)"
-      description: |
-        You can choose what host you want to start the container
+      description: "You can choose what host you want to start the container"
       required: true
       default: "host1"
       type: "enum"
