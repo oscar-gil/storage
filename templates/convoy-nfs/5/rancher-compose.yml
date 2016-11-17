@@ -8,7 +8,7 @@
        label: "NFS Server"
        required: true
        type: "string"
-       default: "ganesha-nfs.ganesha.nfs"
+       default: "ganesha-nfs.ganesha-nfs"
      - variable: "MOUNT_DIR"
        label: "Mount Directory"
        description: "The directory on the NFS server to mount"
