@@ -1,6 +1,6 @@
 .catalog:
   name: "Ganesha NFS"
-  version: "v0.2.1"
+  version: "v0.2.2"
   description: "Ganesha NFS"
   minimum_rancher_version: v0.44.0
   questions:
@@ -30,7 +30,16 @@
         "/export/nfs" to the export path in the container.
       required: false
       type: "string"
-
+    - variable: "HOSTID"
+      label: "Host ID (Optional)"
+      description: |
+        You can choose what host you want to start the container
+      required: true
+      default: "host1"
+      type: "enum"
+        - none
+        - host1
+        - host2
 
 ganesha-nfs:
   retain_ip: true
