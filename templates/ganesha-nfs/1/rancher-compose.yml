@@ -31,7 +31,6 @@
       required: false
       type: "string"
 
-
 ganesha-nfs:
   retain_ip: true
   metadata:
