@@ -8,6 +8,6 @@ ganesha-nfs:
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.pull_image: always
-#    io.rancher.scheduler.affinity:host_label: host=${HOSTID}
+    io.rancher.scheduler.affinity:host_label: host=${HOSTID}
   volumes:
     - ${HOST_MOUNT}${EXPORT_BASE_PATH}
