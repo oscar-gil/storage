@@ -1,49 +1,31 @@
 .catalog:
-  name: "Ganesha NFS"
-  version: "v0.2.2"
-  description: "Ganesha NFS"
-  minimum_rancher_version: v0.44.0
-  questions:
-    - variable: "EXPORT_1_NAME"
-      label: "Export 1 Name"
-      description: "Choose the name of NFS export 1 to create"
-      type: "string"
+  name: "Wordpress"
+  version: "v0.1-educaas1"
+  description: "Blog tool, publishing platform and CMS"
+  uuid: Wordpress-0
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: PUBLIC_PORT
+      description: "public port to access the wordpress site"
+      label: "Public Port"
       required: true
-      default: "nfs_data"
-    - variable: "EXPORT_2_NAME"
-      label: "Export 2 Name"
-      description: "Choose the name of NFS export 2 to create"
-      type: "string"
+      default: "80"
+      type: "int"
+    - variable: DB_CLOUD_SELECTOR
+      label: "DB Cloud Selector"
+      description: "Define the Cloud where the DB will be deployed"
       required: true
-      default: "backup"
-    - variable: "EXPORT_BASE_PATH"
-      label: "Export Base Path"
-      description: "Choose the path in which the exports are created"
-      type: "string"
-      required: true
-      default: "/data/nfs"
-    - variable: "HOST_MOUNT"
-      label: "Host Mount (Optional)"
-      description: |
-        You can use a host bind mount to use as NFS storage instead of a Docker volume.
-        Enter the host path suffixed with a colon (:), e.g. "/exports/nfs:". This will mount
-        "/export/nfs" to the export path in the container.
-      required: false
-      type: "string"
-    - variable: "HOSTID"
-      label: "Host ID (Optional)"
-      description: |
-        You can choose what host you want to start the container
-      required: true
-      default: "host1"
+      default: "OTC"
       type: "enum"
         - none
-        - host1
-        - host2
-
-ganesha-nfs:
-  retain_ip: true
-  metadata:
-    export_1_name: "${EXPORT_1_NAME}"
-    export_2_name: "${EXPORT_2_NAME}"
-    export_base_path: "${EXPORT_BASE_PATH}"
+        - OTC
+        - vCloud
+    - variable: WORDPRESS_CLOUD_SELECTOR
+      label: "Wordpress Cloud Selector"
+      description: "Define the Cloud where the Application will be deployed"
+      required: true
+      default: "vCloud"
+      type: "enum"
+        - none
+        - OTC
+        - vCloud
