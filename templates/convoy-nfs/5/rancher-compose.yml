@@ -8,15 +8,18 @@
        label: "NFS Server"
        required: true
        type: "string"
+       default: "ganesha-nfs.ganesha.nfs"
      - variable: "MOUNT_DIR"
        label: "Mount Directory"
        description: "The directory on the NFS server to mount"
        type: "string"
        required: true
+       default: "nfs_data"
      - variable: "MOUNT_OPTS"
        label: "Mount Options"
        description: "Comma delimited list of mount options, for example: 'nfsvers=4,proto=udp'"
        type: "string"
+       default: "vers=4"
 
 convoy-nfs:
     metadata:
