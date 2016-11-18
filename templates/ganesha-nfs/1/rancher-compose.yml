@@ -34,7 +34,7 @@
       label: "Host ID (Optional)"
       description: |
         You can choose what host you want to start the container or leave it blank
-      required: true
+      required: false
       default: "host1"
       type: "enum"
       options:
