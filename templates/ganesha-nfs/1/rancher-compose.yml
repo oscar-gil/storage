@@ -38,7 +38,7 @@
       default: "host1"
       type: "enum"
       options:
-        - ""
+        - none
         - host1
         - host2
 
