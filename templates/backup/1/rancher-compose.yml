@@ -1,7 +1,7 @@
 .catalog:
-    name: "backup-tools"
+    name: "persistent-storage-backup"
     version: "v0.0.1"
-    description: "Backup Tools"
+    description: "Automatic Persistent Storage Backup"
     questions:
      - variable: "DATA_VOL"
        description: "Origin Data Volume from Ganesha-nfs. If you have not change the defaults at the time of deploying Ganesha-nfs, leave the default"
@@ -15,3 +15,9 @@
        required: yes
        type: "string"
        default: "backup"
+     - variable: "TIME_BACKUP"
+       decription: "Number of minutes between backups"
+       label: "Backup Time in minutes"
+       required: yes
+       type: "int"
+       default: "60"
