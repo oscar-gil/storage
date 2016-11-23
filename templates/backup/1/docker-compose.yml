@@ -4,10 +4,4 @@ backup:
     io.rancher.scheduler.global: 'true'
   privileged: true
   pid: host
-  volumes:
-    - /lib/modules:/lib/modules:ro
-    - /proc:/host/proc
-    - /var/run:/host/var/run
-    - /run:/host/run
-    - /etc/docker/plugins:/etc/docker/plugins
-  image: ubuntu:14.04.3
+  image: oscargil/tsys-backup:v0
