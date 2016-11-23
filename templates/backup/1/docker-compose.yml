@@ -1,4 +1,4 @@
 persistent-storage-backup:
   privileged: true
   pid: host
-  image: oscargil/tsys-backup:v0
+  image: oscargil/tsys-backup:v1
