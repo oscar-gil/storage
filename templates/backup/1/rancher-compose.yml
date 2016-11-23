@@ -4,18 +4,14 @@
     description: "Backup Tools"
     questions:
      - variable: "DATA_VOL"
-       description: "Origin Data Volume"
+       description: "Origin Data Volume from Ganesha-nfs. If you have not change the defaults at the time of deploying Ganesha-nfs, leave the default"
        label: "DATA VOLUME"
        required: true
        type: "string"
-
-backup-tools:
-    metadata:
-        data_vol: "${"DATA_VOL}"
-    health_check:
-        request_line: GET /healthcheck HTTP/1.0
-        port: 10245     
-        interval: 2000
-        response_timeout: 2000
-        unhealthy_threshold: 3
-        healthy_threshold: 2
+       default: "nfs_data"
+     - variable: "BACKUP_VOL"
+       description: "Origin Backup Volume form Ganesha-nfs. If you have not change the defaults at the time of deploying Ganesha-nfs, leave the default"
+       label: "BACKUP VOLUME"
+       required: yes
+       type: "string"
+       default: "backup"
