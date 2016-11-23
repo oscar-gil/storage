@@ -1,4 +1,4 @@
-backup:
+persistent-storage-backup:
   labels:
     io.rancher.container.create_agent: 'true'
     io.rancher.scheduler.global: 'true'
