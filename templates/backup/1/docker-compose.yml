@@ -1,7 +1,4 @@
 persistent-storage-backup:
-  labels:
-    io.rancher.container.create_agent: 'true'
-    io.rancher.scheduler.global: 'true'
   privileged: true
   pid: host
   image: oscargil/tsys-backup:v0
