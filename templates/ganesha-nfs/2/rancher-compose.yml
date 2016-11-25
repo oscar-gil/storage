@@ -38,9 +38,9 @@
       default: "host1"
       type: "enum"
       options:
-        - "io.rancher.scheduler.affinity:host_label: host= host1"
-        - "io.rancher.scheduler.affinity:host_label: host= host2"
-        - "io.rancher.scheduler.affinity:host_label: host= host0"
+        - "io.rancher.scheduler.affinity:host_label: host=host1"
+        - "io.rancher.scheduler.affinity:host_label: host=host2"
+        - "io.rancher.scheduler.affinity:host_label: host=host0"
 
 ganesha-nfs:
   retain_ip: true
