@@ -1,0 +1,10 @@
+ganesha-nfs:
+  image: oscargil/rancher-ganesha-nfs:4.6
+  command: /opt/rancher/start_nfs.sh
+  privileged: true
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.container.pull_image: always
+    ${LABEL_HOSTID}
+  volumes:
+    - ${HOST_MOUNT}${EXPORT_BASE_PATH}
